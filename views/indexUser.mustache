@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Users</title>
+  <link href="../public/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <p><a href='/unemployed'>Hire me!</a></p><span><p><a href='/employed'>Hired!</a></p></span>
+    {{#users}}
+    <a href='/users/{{id}}'>
+    <div class="containerImg">
+      <img src="{{avatar}}" alt="{{username}}" />
+      <div class="containerName">
+        <p class="namePara">
+          {{name}}
+        </p>
+      </div>
+    </div>
+      </a>
+    {{/users}}
+  </div>
+</body>
+</html>

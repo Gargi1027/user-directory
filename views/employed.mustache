@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Employed Users</title>
+    <link href="../public/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header><h1>These are Employed</h1></header>
+    <ul class="wrapper">
+      <h3>Currently Roboting</h3>
+      {{#users}}
+      <a href='/users/{{id}}'>
+      <li>{{name}}<img src="{{avatar}}" />
+      </li>
+      </a>
+      {{/users}}
+    </ul>
+    <a href="/">Home Link</a>
+  </body>
+</html>

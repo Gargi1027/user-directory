@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Individual</title>
+  <link href="../public/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class= "content">
+      <img class="userAvatar" src="{{avatar}}" alt="{{username}}" />
+      <div class="sideContents">
+        <p class=nameContent>
+          {{name}}
+        </p>
+        <p>
+          {{address.city}}, {{address.country}} | {{job}}, {{company}}
+        </p>
+        {{^address.city}}
+        <p>
+          {{address.country}} | {{job}}, {{company}}
+        </p>
+        {{/address.city}}
+      {{^job}}
+      <p>
+        Available to work!!!
+      </p>
+      {{/job}}
+        <p>
+          {{email}} | {{phone}}
+        </p>
+      </div>
+      </div>
+      <div class="profContent">
+        <div class="educationInfo">
+          <b>Education </b>
+          <span>{{university}}</span>
+          {{^university}}
+            <p></p>
+          {{/university}}
+        </div>
+        <div class="skillsInfo">
+          <p><b>Skills </b></p>
+          <ul>
+              {{#skills}}
+                <li>
+                  {{.}}
+                </li>
+              {{/skills}}
+            </ul>
+        </div>
+      </div>
+<a href="/">Home Link</a>
+</body>
+</html>
